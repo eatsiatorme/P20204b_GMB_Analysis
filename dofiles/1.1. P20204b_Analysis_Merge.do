@@ -31,7 +31,8 @@ tempfile y
 save `y'
 *********************
 use "$di_data2", clear
-
+replace b20_2 = "." if b20_2 == ""
+destring b20_2 b20_other_3, replace force
 
 tempfile x
 save `x'
@@ -46,9 +47,14 @@ label def L_cycle 0 "Cycle 1" 1 "Cycle 2" 2 "Cycle 3"
 label val cyclex L_cycle
 *use "$field_mc1\Tekki_Fii_PV", clear
 
-ds ApplicantID treatment_group, not
+foreach var of varlist ta_*{
+	cap drop `var' ta_*
+	
+}
+
+ds ApplicantID treatment, not
 foreach var of varlist `r(varlist)' {
-	rename `var' `var'_ml
+	rename `var' `var'_el
 }
 
 
@@ -62,4 +68,4 @@ foreach var of varlist `r(varlist)' {
 ******************************
 **Save in data path**
 ******************************
-save "$data_path\COMPLETE_DATA.dta", replace
+save "$data_path\COMPLETE_DATA_Endline.dta", replace
