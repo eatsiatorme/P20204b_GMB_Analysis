@@ -38,17 +38,17 @@ if "`c(username)'" == "Personal" {
 
 if "`c(username)'"=="NathanSivewright" { 
 	global timezone = 1
-global dofiles "C:\Users\/`c(username)'\Documents\GitHub\PP20204i_GMB_Analysis\dofiles"
+global dofiles "C:\Users\/`c(username)'\Documents\GitHub\PP20204b_GMB_Analysis\dofiles"
 }
 
 if "`c(username)'"=="ThomasEekhout" { 
 	global timezone = 1
-global dofiles "C:\Users\/`c(username)'\Downloads\GitHub\P20204i_GMB_Analysis\dofiles"
+global dofiles "C:\Users\/`c(username)'\Downloads\GitHub\P20204b_GMB_Analysis\dofiles"
 }
 
 if "`c(username)'"=="ElikplimAtsiatorme" {
 	global timezone = 1
-global dofiles "C:\Users\/`c(username)'\Documents\GitHub\P20204i_GMB_Analysis\dofiles"
+global dofiles "C:\Users\/`c(username)'\Documents\GitHub\P20204b_GMB_Analysis\dofiles"
 }
 
 
@@ -57,9 +57,9 @@ global dofiles "C:\Users\/`c(username)'\Documents\GitHub\P20204i_GMB_Analysis\do
 // Round > Cycle > Tool Globals
 global proj "P20204b"
 global round "Endline"
-global cycle "C1B1"
+*global cycle "C1B1"
 global tool "Youth"
-global data_path "$ONEDRIVE\P20204b_EUTF_GMB - Documents\02_Analysis\02_Data"
+global data_path "$ONEDRIVE\P20204b_EUTF_GMB - Documents\02_Analysis\02_Data\Endline"
 *global path_mc1 "$ONEDRIVE\P20204b_EUTF_GMB - Documents\02_Analysis\02_Data\/Midline\/C1B1\/Youth\"
 *global field_mc1 "$ONEDRIVE\P20204b_EUTF_GMB - Documents\02_Analysis\04_Raw_Data\Midline\C1B1\Youth\cleaning\"
 
@@ -68,15 +68,15 @@ global encrypted_path_s "$encrypted_drive_s:"
 
 ****$di_data refers to de-identified data. Recommended to use this data for analysis
 global di_data1 "$ONEDRIVE\P20204b_EUTF_GMB - Documents\02_Analysis\02_Data\Endline\C1\Youth\data_an.dta"
-global di_data2 "$ONEDRIVE\P20204b_EUTF_GMB - Documents\02_Analysis\02_Data\Endline\C2\Youth\Tekki_Fii_PV_NoPII.dta"
+global di_data2 "$ONEDRIVE\P20204b_EUTF_GMB - Documents\02_Analysis\02_Data\Endline\C2\Youth\Tekki_Fii_PV_5_NoPII.dta"
 *global di_data3 "$ONEDRIVE\P20204b_EUTF_GMB - Documents\02_Analysis\02_Data\Endline\C3\Youth\Tekki_fii_PV_3_Final_NoPII.dta"
 
 
-global dofiles "$ONEDRIVE\P20204b_EUTF_GMB - Documents\02_Analysis\01_DoFiles\Analysis"
+*global dofiles "$ONEDRIVE\P20204b_EUTF_GMB - Documents\02_Analysis\01_DoFiles\Analysis"
 
 ** Baseline data to merge
 global bl_data  "$ONEDRIVE\P20204b_EUTF_GMB - Documents\02_Analysis\04_Raw_Data\Baseline\Cleaned Merge\"
-global ml_data "$ONEDRIVE\P20204b_EUTF_GMB - Documents\02_Analysis\02_Data\
+global ml_data "$ONEDRIVE\P20204b_EUTF_GMB - Documents\02_Analysis\02_Data\"
 
 **Data for analysis
 *global CLEAN_DATA "$data_path\CLEANED_DATA.dta"
